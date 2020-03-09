@@ -1,0 +1,207 @@
+train_set_portion 0.03
+('X_train[0][0] shape', (136, 4))
+('Y_train[0] shape', (136,))
+training
+Iteration 0
+dual: 1.057171, dual_gap: 8.789843, primal: 9.847015
+Iteration 1
+Iteration 2
+Iteration 3
+Iteration 4
+Iteration 5
+Iteration 6
+Iteration 7
+Iteration 8
+Iteration 9
+Calculating final objective.
+score: 0.92
+
+
+train_set_portion 0.05
+('X_train[0][0] shape', (203, 4))
+('Y_train[0] shape', (203,))
+training
+Iteration 0
+dual: 1.123560, dual_gap: 12.906645, primal: 14.030205
+Iteration 1
+Iteration 2
+Iteration 3
+Iteration 4
+Iteration 5
+Iteration 6
+Iteration 7
+Iteration 8
+Iteration 9
+Calculating final objective.
+score: 0.92
+
+
+train_set_portion 0.1
+('X_train[0][0] shape', (438, 4))
+('Y_train[0] shape', (438,))
+training
+Iteration 0
+dual: 1.128349, dual_gap: 28.641453, primal: 29.769802
+Iteration 1
+Iteration 2
+Iteration 3
+Iteration 4
+Iteration 5
+Iteration 6
+Iteration 7
+Iteration 8
+Iteration 9
+Calculating final objective.
+score: 0.93
+
+
+train_set_portion 0.2
+('X_train[0][0] shape', (862, 4))
+('Y_train[0] shape', (862,))
+training
+Iteration 0
+dual: 1.078823, dual_gap: 56.001266, primal: 57.080089
+Iteration 1
+Iteration 2
+Iteration 3
+Iteration 4
+Iteration 5
+Iteration 6
+Iteration 7
+Iteration 8
+Iteration 9
+Calculating final objective.
+score: 0.93
+
+
+train_set_portion 0.3
+('X_train[0][0] shape', (1321, 4))
+('Y_train[0] shape', (1321,))
+training
+Iteration 0
+dual: 1.086243, dual_gap: 86.363138, primal: 87.449381
+Iteration 1
+Iteration 2
+Iteration 3
+Iteration 4
+Iteration 5
+Iteration 6
+Iteration 7
+Iteration 8
+Iteration 9
+Calculating final objective.
+score: 0.92
+train_set_portion 0.4
+
+
+('X_train[0][0] shape', (1721, 4))
+('Y_train[0] shape', (1721,))
+training
+Iteration 0
+dual: 1.062563, dual_gap: 117.905106, primal: 118.967668
+Iteration 1
+Iteration 2
+Iteration 3
+Iteration 4
+Iteration 5
+Iteration 6
+Iteration 7
+Iteration 8
+Iteration 9
+Calculating final objective.
+score: 0.92
+
+
+train_set_portion 0.5
+('X_train[0][0] shape', (2076, 4))
+('Y_train[0] shape', (2076,))
+training
+Iteration 0
+dual: 1.033334, dual_gap: 153.918223, primal: 154.951556
+Iteration 1
+Iteration 2
+Iteration 3
+Iteration 4
+Iteration 5
+Iteration 6
+Iteration 7
+Iteration 8
+Iteration 9
+Calculating final objective.
+score: 0.91
+
+
+train_set_portion 0.6
+('X_train[0][0] shape', (2513, 4))
+('Y_train[0] shape', (2513,))
+training
+Iteration 0
+dual: 0.998234, dual_gap: 193.413612, primal: 194.411846
+Iteration 1
+Iteration 2
+Iteration 3
+Iteration 4
+Iteration 5
+Iteration 6
+Iteration 7
+Iteration 8
+Iteration 9
+Calculating final objective.
+score: 0.94
+
+
+train_set_portion 0.7
+('X_train[0][0] shape', (2933, 4))
+('Y_train[0] shape', (2933,))
+training
+Iteration 0
+dual: 1.005607, dual_gap: 234.303501, primal: 235.309108
+Iteration 1
+Iteration 2
+Iteration 3
+Iteration 4
+Iteration 5
+Iteration 6
+Iteration 7
+Iteration 8
+Iteration 9
+Calculating final objective.
+score: 0.92
+
+
+train_set_portion 0.8
+('X_train[0][0] shape', (3400, 4))
+('Y_train[0] shape', (3400,))
+training
+Iteration 0
+dual: 0.954862, dual_gap: 300.994414, primal: 301.949276
+Iteration 1
+Iteration 2
+Iteration 3
+Iteration 4
+Iteration 5
+Iteration 6
+Iteration 7
+Iteration 8
+Iteration 9
+Calculating final objective.
+score: 0.94
+
+
+train_set_portion 0.9
+('X_train[0][0] shape', (3799, 4))
+('Y_train[0] shape', (3799,))
+training
+Iteration 0
+dual: 0.911336, dual_gap: 355.602506, primal: 356.513843
+Iteration 1
+Iteration 2
+Iteration 3
+Iteration 4
+Iteration 5
+Iteration 6
+Iteration 7
+Iteration 8
+Iteration 9
+Calculating final objective.
+score: 0.93
