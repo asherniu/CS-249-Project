@@ -132,6 +132,25 @@ Calculating final objective.
 score: 0.9212
 
 
+train_set_portion 0.1
+('X_train[0][0] shape', (413, 4))
+('Y_train[0] shape', (413,))
+training
+Iteration 0
+dual: 1.127553, dual_gap: 25.844642, primal: 26.972194
+Iteration 1
+Iteration 2
+Iteration 3
+Iteration 4
+Iteration 5
+Iteration 6
+Iteration 7
+Iteration 8
+Iteration 9
+Calculating final objective.
+score: 0.9341
+
+
 train_set_portion 0.2
 ('X_train[0][0] shape', (838, 4))
 ('Y_train[0] shape', (838,))
