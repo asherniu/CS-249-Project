@@ -50,7 +50,7 @@ def get_dataset_portion(cleaned_author_features, cleaned_author_labels,
 
 
 def graph_crf(train_set_portion=0.9):
-    print('train_set_portion %s' % train_set_portion)
+    print('\ntrain_set_portion %s' % train_set_portion)
     rand_arr = np.random.rand(len(cleaned_author_labels))
     features_train, labels_train, edges_train = \
         get_dataset_portion(cleaned_author_features, cleaned_author_labels,
@@ -73,14 +73,16 @@ def graph_crf(train_set_portion=0.9):
     print('training')
     ssvm.fit(X_train, Y_train) 
     score = ssvm.score(X_test, Y_test) 
-    print('score: %.4f' % score)
+    print('score: %.4f\n' % score)
 
 
 
 
 if __name__ == '__main__':
-    graph_crf(0.03)
-    for i in range(10):
+    for i in range(7):
+        graph_crf(0.03+i/100.0)
+    
+    for i in range(8):
         graph_crf(0.2+i/10.0)
 
     
