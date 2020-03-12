@@ -19,13 +19,15 @@ Thomas Kipf, [Graph Convolutional Networks](http://tkipf.github.io/graph-convolu
 
 ```python train.py```
 
-## Dataset: data/DBLP_four_area/ and data/four_area/ (note: author_feature.pickle was generated from the dataset)
+## Dataset: 
+
+```data/DBLP_four_area/ and data/four_area/ (note: author_feature.pickle was generated from the dataset)```
 
 ## Model Design:
-
-	### Data structure: authors as the nodes in the graph, Adjacency matrix between authors, features of authors, labels of authors
-	### Generate our own dataset: "load_data_v1()" in pygcn/utils.py.
-
+```
+	Data structure: authors as the nodes in the graph, Adjacency matrix between authors, features of authors, labels of authors
+	Generate our own dataset: "load_data_v1()" in pygcn/utils.py.
+```
 ## References
 
 [1] [Kipf & Welling, Semi-Supervised Classification with Graph Convolutional Networks, 2016](https://arxiv.org/abs/1609.02907)
