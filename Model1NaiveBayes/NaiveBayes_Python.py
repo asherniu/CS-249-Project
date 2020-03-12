@@ -28,18 +28,18 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 # In[2]:
 
 
-author_df = pd.read_csv("data/four_area/author.txt", sep = "\t", names=["ID", "Author name"],encoding='utf8')
-conf_df = pd.read_csv("data/four_area/conf.txt", sep = "\t", names=["ID", "Conference name"])
-paper_df = pd.read_csv("data/four_area/paper.txt", sep = "\t", names=["ID", "Paper title"])
-term_df = pd.read_csv("data/four_area/term.txt", sep = "\t", names=["ID", "Term"])
-paper_author = pd.read_csv("data/four_area/paper_author.txt", sep = "\t", names=["paperID", "authorID"])
-paper_conf = pd.read_csv("data/four_area/paper_conf.txt", sep = "\t", names=["paperID", "confID"])
-paper_term = pd.read_csv("data/four_area/paper_term.txt", sep = "\t", names=["paperID", "termID"])
-author_dict = pd.read_csv("data/DBLP_four_area/cleaned_author_dict.txt", sep = "\t", names=["ID", "Author name"], encoding='utf8')
-conf_dict = pd.read_csv("data/DBLP_four_area/conf_dict.txt", sep = "\t", names=["ID", "Conference name"])
-term_dict = pd.read_csv("data/DBLP_four_area/term_dict.txt", sep = "\t", names=["ID", "Term"])
-author_label = pd.read_csv("data/DBLP_four_area/author_label.txt", sep = "\t", names=["authorID", "Label"])
-conf_label = pd.read_csv("data/DBLP_four_area/conf_label.txt", sep = "\t", names=["confID", "Conference name", "Label"])
+author_df = pd.read_csv("../data/four_area/author.txt", sep = "\t", names=["ID", "Author name"],encoding='utf8')
+conf_df = pd.read_csv("../data/four_area/conf.txt", sep = "\t", names=["ID", "Conference name"])
+paper_df = pd.read_csv("../data/four_area/paper.txt", sep = "\t", names=["ID", "Paper title"])
+term_df = pd.read_csv("../data/four_area/term.txt", sep = "\t", names=["ID", "Term"])
+paper_author = pd.read_csv("../data/four_area/paper_author.txt", sep = "\t", names=["paperID", "authorID"])
+paper_conf = pd.read_csv("../data/four_area/paper_conf.txt", sep = "\t", names=["paperID", "confID"])
+paper_term = pd.read_csv("../data/four_area/paper_term.txt", sep = "\t", names=["paperID", "termID"])
+author_dict = pd.read_csv("../data/DBLP_four_area/cleaned_author_dict.txt", sep = "\t", names=["ID", "Author name"], encoding='utf8')
+conf_dict = pd.read_csv("../data/DBLP_four_area/conf_dict.txt", sep = "\t", names=["ID", "Conference name"])
+term_dict = pd.read_csv("../data/DBLP_four_area/term_dict.txt", sep = "\t", names=["ID", "Term"])
+author_label = pd.read_csv("../data/DBLP_four_area/author_label.txt", sep = "\t", names=["authorID", "Label"])
+conf_label = pd.read_csv("../data/DBLP_four_area/conf_label.txt", sep = "\t", names=["confID", "Conference name", "Label"])
 
 # Merging dataframes together
 conf_dict_m = pd.merge(conf_dict, conf_df, on='Conference name')
@@ -183,7 +183,7 @@ for size in [0.01,0.02,0.03,0.04,0.05,0.1,0.2,0.3,0.4,0.5,0.6,0.7]:
 # In[9]:
 
 
-acc
+print (acc)
 
 
 # In[10]:
