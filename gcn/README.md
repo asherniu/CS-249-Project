@@ -26,7 +26,7 @@ Thomas Kipf, [Graph Convolutional Networks](http://tkipf.github.io/graph-convolu
 ## Model Design:
 ```
 Data structure: authors as the nodes in the graph, Adjacency matrix between authors, features of authors, labels of authors
-Generate our own dataset: "load_data_v1()" in pygcn/utils.py.```
+Generate our own dataset: "load_data_v1()" in pygcn/utils.py.
 ```
 ## References
 
