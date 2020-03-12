@@ -1,4 +1,4 @@
 author_matrix.*
 author_matrix.pickle
 .DS_Store
-.idea/vcs.xml
+.idea/*
