@@ -5,6 +5,64 @@ You can find the codes in the NaiveBayes_Jupyter.ipynb. It will require author_f
 
 
 
-# Model 2 Pairwise CRF:
-The codes are in the ModelPairwiseCRF directory. It requires PyStruct, Numpy, and Pandas python packages.
-Please refer to the README file in the ModelPairwiseCRF directory. 
+# Model 2 Pairwise Conditional Random Field:
+The codes are in the ModelPairwiseCRF directory. 
+Implemented with [PyStruct](https://pystruct.github.io/index.html)
+
+## Prerequisite
+1. numpy
+2. pandas
+3. [pystruct](https://pystruct.github.io/installation.html)
+(note that pystruct is only supported on Python2, Python3.6 or less,
+we use Python2.7 to test the code)
+4. The model requires `af_py2.pickle` which stores the author feature matrix with 
+pickle protocol 2 (since we use Python2). We provide the pickle file in the directory, 
+or you can re-generate the pickle file, run `gen_author_feature_py2_pickle.py`.
+
+## Train and Evaluate
+`python crf.py`
+
+## Experiment Results
+We have run the model with `python crf.py > crf.log`, 
+you can either rerun the model or directly check our results in `crf.log`
+
+
+
+
+# Model3 Graph Convolutional Networks in PyTorch:
+
+
+PyTorch implementation of Graph Convolutional Networks (GCNs) for semi-supervised classification [1].
+
+For a high-level introduction to GCNs, see:
+
+Thomas Kipf, [Graph Convolutional Networks](http://tkipf.github.io/graph-convolutional-networks/) (2016)
+
+![Graph Convolutional Networks](gcn-figure.png)
+
+
+## Requirements
+
+  * PyTorch 0.4 or 0.5
+  * Python 2.7 or 3.6
+
+## Usage
+
+```python train.py```
+
+## Dataset: 
+
+```data/DBLP_four_area/ and data/four_area/ (note: author_feature.pickle was generated from the dataset)```
+
+## Model Design:
+```
+Data structure: authors as the nodes in the graph, Adjacency matrix between authors, features of authors, labels of authors
+Generate our own dataset: "load_data_v1()" in pygcn/utils.py.
+```
+## References
+
+[1] [Kipf & Welling, Semi-Supervised Classification with Graph Convolutional Networks, 2016](https://arxiv.org/abs/1609.02907)
+
+[2] [Sen et al., Collective Classification in Network Data, AI Magazine 2008](http://linqs.cs.umd.edu/projects/projects/lbc/)
+
+>>>>>>> 87dd3d183d37b53735964a810745b7b404744920
