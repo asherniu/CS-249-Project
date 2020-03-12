@@ -9,13 +9,6 @@ Thomas Kipf, [Graph Convolutional Networks](http://tkipf.github.io/graph-convolu
 
 ![Graph Convolutional Networks](figure.png)
 
-Note: There are subtle differences between the TensorFlow implementation in https://github.com/tkipf/gcn and this PyTorch re-implementation. This re-implementation serves as a proof of concept and is not intended for reproduction of the results reported in [1].
-
-This implementation makes use of the Cora dataset from [2].
-
-## Installation
-
-```python setup.py install```
 
 ## Requirements
 
@@ -26,21 +19,15 @@ This implementation makes use of the Cora dataset from [2].
 
 ```python train.py```
 
+## Dataset: data/DBLP_four_area/ and data/four_area/ (note: author_feature.pickle was generated from the dataset)
+
+## Model Design:
+
+	### Data structure: authors as the nodes in the graph, Adjacency matrix between authors, features of authors, labels of authors
+	### Generate our own dataset: "load_data_v1()" in pygcn/utils.py.
+
 ## References
 
 [1] [Kipf & Welling, Semi-Supervised Classification with Graph Convolutional Networks, 2016](https://arxiv.org/abs/1609.02907)
 
 [2] [Sen et al., Collective Classification in Network Data, AI Magazine 2008](http://linqs.cs.umd.edu/projects/projects/lbc/)
-
-## Cite
-
-Please cite our paper if you use this code in your own work:
-
-```
-@article{kipf2016semi,
-  title={Semi-Supervised Classification with Graph Convolutional Networks},
-  author={Kipf, Thomas N and Welling, Max},
-  journal={arXiv preprint arXiv:1609.02907},
-  year={2016}
-}
-```
