@@ -65,4 +65,3 @@ Generate our own dataset: "load_data_v1()" in pygcn/utils.py.
 
 [2] [Sen et al., Collective Classification in Network Data, AI Magazine 2008](http://linqs.cs.umd.edu/projects/projects/lbc/)
 
->>>>>>> 87dd3d183d37b53735964a810745b7b404744920
