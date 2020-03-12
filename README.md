@@ -1,2 +1,4 @@
 # CS-249-Project
-Download author_matrix from here https://drive.google.com/open?id=1SWsKha-DH49v_8DGvgvV01uu-TwEiT5a, or run the codes to create it on your local ~10-15mins. 
+
+# Model 1 Naive Bayes: 
+You can find the codes in the Model1NaiveBayes_Jupyter.ipynb. It will require author_feature.pickle and author_features.pickle. Both can be generated, downloaded and came with the repo. You can also run Model1NaiveBayes_Python.py if you prefer python codes. 
