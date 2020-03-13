@@ -57,6 +57,7 @@ Thomas Kipf, [Graph Convolutional Networks](http://tkipf.github.io/graph-convolu
 ```
 gcn/data/DBLP_four_area/ and gcn/data/four_area/ 
 (note: we directly read dataset from author_matrix.pickle and author_feature.pickle, which were generated from the dataset through function "generate_adj_feature()" in gcn/pygcn/utils.py)
+You can generate the pickle files or download them, and modify the path of reading function "load_data()" in gcn/pygcn/utils.py.
 ```
 
 ## Model Design:
