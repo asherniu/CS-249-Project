@@ -9,7 +9,7 @@ import torch
 import torch.nn.functional as F
 import torch.optim as optim
 
-from pygcn.utils import load_data, accuracy, load_data_v1
+from pygcn.utils import load_data, accuracy
 from pygcn.models import GCN
 
 # Training settings
@@ -37,17 +37,6 @@ np.random.seed(args.seed)
 torch.manual_seed(args.seed)
 if args.cuda:
     torch.cuda.manual_seed(args.seed)
-
-# Load data
-adj, features, labels, idx_train, idx_val, idx_test = load_data_v1()
-
-# Model and optimizer
-model = GCN(nfeat=features.shape[1],
-            nhid=args.hidden,
-            nclass=labels.max().item() + 1,
-            dropout=args.dropout)
-optimizer = optim.Adam(model.parameters(),
-                       lr=args.lr, weight_decay=args.weight_decay)
 
 if args.cuda:
     model.cuda()
@@ -77,12 +66,15 @@ def train(epoch):
 
     loss_val = F.nll_loss(output[idx_val], labels[idx_val])
     acc_val = accuracy(output[idx_val], labels[idx_val])
-    print('Epoch: {:04d}'.format(epoch+1),
-          'loss_train: {:.4f}'.format(loss_train.item()),
-          'acc_train: {:.4f}'.format(acc_train.item()),
-          'loss_val: {:.4f}'.format(loss_val.item()),
-          'acc_val: {:.4f}'.format(acc_val.item()),
-          'time: {:.4f}s'.format(time.time() - t))
+    """
+    uncomment to output validation log
+    # print('Epoch: {:04d}'.format(epoch+1),
+    #       'loss_train: {:.4f}'.format(loss_train.item()),
+    #       'acc_train: {:.4f}'.format(acc_train.item()),
+    #       'loss_val: {:.4f}'.format(loss_val.item()),
+    #       'acc_val: {:.4f}'.format(acc_val.item()),
+    #       'time: {:.4f}s'.format(time.time() - t))
+    """
 
 
 def test():
@@ -94,13 +86,38 @@ def test():
           "loss= {:.4f}".format(loss_test.item()),
           "accuracy= {:.4f}".format(acc_test.item()))
 
+# Load data
+adj, features, labels = load_data()
 
-# Train model
-t_total = time.time()
-for epoch in range(args.epochs):
-    train(epoch)
-print("Optimization Finished!")
-print("Total time elapsed: {:.4f}s".format(time.time() - t_total))
+# Model and optimizer
+model = GCN(nfeat=features.shape[1],
+            nhid=args.hidden,
+            nclass=labels.max().item() + 1,
+            dropout=args.dropout)
+optimizer = optim.Adam(model.parameters(),
+                       lr=args.lr, weight_decay=args.weight_decay)
 
-# Testing
-test()
+# Train on training dataset which has different portion.
+portion = [0.01, 0.02, 0.03, 0.04, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7]
+for p in portion:
+    print("training dataset portion: ", p, "size: ", int(labels.shape[0] * p))
+    split = int(labels.shape[0] * p)
+    idx_train = range(split)
+    idx_val = range(500, 700)
+    idx_test = range(split, labels.shape[0])
+
+    idx_train = torch.LongTensor(idx_train)
+    idx_val = torch.LongTensor(idx_val)
+    idx_test = torch.LongTensor(idx_test)
+
+    # Train model
+    t_total = time.time()
+    for epoch in range(args.epochs):
+        train(epoch)
+    print("Optimization Finished!")
+    print("Total time elapsed: {:.4f}s".format(time.time() - t_total))
+
+    # Testing
+    test()
+    print("\n")
+
