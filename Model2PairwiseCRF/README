@@ -1,0 +1,22 @@
+# Pairwise Conditional Random Field
+
+Implemented with [PyStruct](https://pystruct.github.io/index.html)
+
+## Prerequisite
+1. numpy
+2. pandas
+3. [pystruct](https://pystruct.github.io/installation.html)
+(note that pystruct is only supported on Python2, Python3.6 or less,
+we use Python2.7 to test the code)
+4. The model requires `af_py2.pickle` which stores the author feature matrix with 
+pickle protocol 2 (since we use Python2). We provide the pickle file in the directory.
+To re-generate the pickle file, run `gen_author_feature_py2_pickle.py`.
+
+## Train and Evaluate
+`python crf.py`
+
+
+## Experiment Results
+We have run the model with `python crf.py > crf.log`, 
+you can either rerun the model or directly check our results in `crf.log`
+
