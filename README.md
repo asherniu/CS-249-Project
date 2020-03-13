@@ -1,6 +1,6 @@
 # CS-249-Project
 
-### Download the adjacency matrix and feature vector here https://drive.google.com/drive/folders/1ZdROyFY3KTh7ARqleMKwfYFL8BoWBsLD?usp=sharing or run the generation codes in model 2 or 3 (about 10-15 min to generate) 
+### Download the adjacency matrix and feature vector from here https://drive.google.com/drive/folders/1ZdROyFY3KTh7ARqleMKwfYFL8BoWBsLD?usp=sharing or run the generation codes in model 2 or 3 (about 10-15 min to generate) 
 
 # Model 1 Naive Bayes: 
 You can find the codes in the NaiveBayes_Jupyter.ipynb. It will require author_feature.pickle and author_features.pickle. Both can be generated, downloaded and came with the repo. You can also run NaiveBayes_Python.py if you prefer python codes. 
