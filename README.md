@@ -54,12 +54,12 @@ Thomas Kipf, [Graph Convolutional Networks](http://tkipf.github.io/graph-convolu
 
 ## Dataset: 
 
-```data/DBLP_four_area/ and data/four_area/ (note: author_feature.pickle was generated from the dataset)```
+```gcn/data/DBLP_four_area/ and gcn/data/four_area/ (note: author_feature.pickle was generated from the dataset through generate_adj_feature() in gcn/pygcn/utils.py)```
 
 ## Model Design:
 ```
 Data structure: authors as the nodes in the graph, Adjacency matrix between authors, features of authors, labels of authors
-Generate our own dataset: "load_data_v1()" in pygcn/utils.py.
+Generate our own dataset: "load_data_v1()" in gcn/pygcn/utils.py.
 ```
 ## References
 
