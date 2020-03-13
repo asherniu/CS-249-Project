@@ -58,7 +58,7 @@ def load_data():
     print('Loading dataset...')
     # generate_adj_feature() is used to generate adjacency matrix and feature vectors
     # But here we skip this step, and directly read from the pickle we stored before.
-    adj, features = generate_adj_feature()
+    # adj, features = generate_adj_feature()
 
     adj = pd.read_pickle('../data/author_matrix.pickle')
     labels = pd.read_csv("../data/DBLP_four_area/author_label.txt", sep = "\t", names=["authorID", "Label"])
