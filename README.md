@@ -62,7 +62,7 @@ gcn/data/DBLP_four_area/ and gcn/data/four_area/
 ## Model Design:
 ```
 Data structure: authors as the nodes in the graph, Adjacency matrix between authors, features of authors, labels of authors
-Generate our own dataset: "load_data_v1()" in gcn/pygcn/utils.py.
+Generate our own dataset: "load_data()" in gcn/pygcn/utils.py.
 ```
 ## References
 
